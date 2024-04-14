@@ -29,13 +29,12 @@ class _LoginScreenState extends State<LoginScreen> {
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
                 Image.asset(
-                  'assets/images/logotipo.png',
+                  Theme.of(context).brightness == Brightness.dark ? 'assets/images/logotipo3.png' : 'assets/images/logotipo2.png',
                   scale: 1.6,
                 ),
                 const SizedBox(height: 10),
                 const Text(
                   'Faça o Login para continuar',
-                  // style: Theme.of(context).textTheme.bodyMedium,
                   style: TextStyle(
                     color: Colors.grey,
                   ),
@@ -64,11 +63,11 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                       );
                     },
-                    style: const ButtonStyle(
+                    style: ButtonStyle(
                       backgroundColor: MaterialStatePropertyAll(
-                        Colors.blue,
+                        Theme.of(context).colorScheme.primary,
                       ),
-                      foregroundColor: MaterialStatePropertyAll(
+                      foregroundColor: const MaterialStatePropertyAll(
                         Colors.white,
                       ),
                     ),

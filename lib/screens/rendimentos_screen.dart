@@ -23,7 +23,6 @@ class _RendimentosState extends State<Rendimentos> {
       ),
       drawerScrimColor: Colors.transparent,
       drawer: const Gaveta(),
-      // backgroundColor: Colors.grey[50],
       body: Padding(
         padding: const EdgeInsets.fromLTRB(10, 40, 10, 10),
         child: SingleChildScrollView(
@@ -33,8 +32,8 @@ class _RendimentosState extends State<Rendimentos> {
               Container(
                 padding: const EdgeInsets.all(10),
                 width: size.width,
-                decoration: const BoxDecoration(
-                  color: Colors.white,
+                decoration: BoxDecoration(
+                  color: Theme.of(context).colorScheme.secondary,
                 ),
                 child: const Column(
                   children: [
@@ -59,8 +58,8 @@ class _RendimentosState extends State<Rendimentos> {
               Container(
                 padding: const EdgeInsets.all(10),
                 width: size.width,
-                decoration: const BoxDecoration(
-                  color: Colors.white,
+                decoration: BoxDecoration(
+                  color: Theme.of(context).colorScheme.secondary,
                 ),
                 child: Column(
                   children: [
@@ -125,8 +124,8 @@ class _RendimentosState extends State<Rendimentos> {
               Container(
                 padding: const EdgeInsets.symmetric(vertical: 20),
                 width: double.infinity,
-                decoration: const BoxDecoration(
-                  color: Colors.white,
+                decoration: BoxDecoration(
+                  color: Theme.of(context).colorScheme.secondary,
                 ),
                 child: Column(
                   children: [

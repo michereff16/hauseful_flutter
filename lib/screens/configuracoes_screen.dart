@@ -41,18 +41,17 @@ class _ConfiguracoesState extends State<Configuracoes> {
       ),
       drawerScrimColor: Colors.transparent,
       drawer: const Gaveta(),
-      // backgroundColor: Colors.grey[100],
       body: Padding(
         padding: const EdgeInsets.symmetric(vertical: 20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Text(
                 'Idioma do app:',
                 style: TextStyle(
-                  color: Color(0xFF043C5C),
+                  color: Theme.of(context).colorScheme.primary,
                   fontWeight: FontWeight.w500,
                 ),
               ),
@@ -62,7 +61,12 @@ class _ConfiguracoesState extends State<Configuracoes> {
               child: DropdownButtonHideUnderline(
                 child: DropdownButton<String>(
                   value: _idioma,
-                  hint: const Text('Selecione um idioma'),
+                  hint: const Text(
+                    'Selecione um idioma',
+                    style: TextStyle(
+                      fontSize: 14,
+                    ),
+                  ),
                   isExpanded: true,
                   onChanged: (idiomaSelecionado) {
                     setState(() {
@@ -87,12 +91,12 @@ class _ConfiguracoesState extends State<Configuracoes> {
             const Divider(
               height: 40,
             ),
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Text(
                 'Preferências',
                 style: TextStyle(
-                  color: Color(0xFF043C5C),
+                  color: Theme.of(context).colorScheme.primary,
                   fontWeight: FontWeight.w500,
                 ),
               ),
@@ -111,12 +115,12 @@ class _ConfiguracoesState extends State<Configuracoes> {
             const Divider(
               height: 40,
             ),
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Text(
                 'Privacidade',
                 style: TextStyle(
-                  color: Color(0xFF043C5C),
+                  color: Theme.of(context).colorScheme.primary,
                   fontWeight: FontWeight.w500,
                 ),
               ),
@@ -135,12 +139,12 @@ class _ConfiguracoesState extends State<Configuracoes> {
             const Divider(
               height: 40,
             ),
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Text(
                 'Segurança',
                 style: TextStyle(
-                  color: Color(0xFF043C5C),
+                  color: Theme.of(context).colorScheme.primary,
                   fontWeight: FontWeight.w500,
                 ),
               ),
@@ -164,10 +168,10 @@ class _ConfiguracoesState extends State<Configuracoes> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Text(
+                  Text(
                     'Modo escuro',
                     style: TextStyle(
-                      color: Color(0xFF043C5C),
+                      color: Theme.of(context).colorScheme.primary,
                       fontWeight: FontWeight.w500,
                     ),
                   ),
@@ -191,10 +195,10 @@ class _ConfiguracoesState extends State<Configuracoes> {
                   ),
                 );
               },
-              child: const Text(
+              child: Text(
                 'Sair',
                 style: TextStyle(
-                  color: Color(0xFF043C5C),
+                  color: Theme.of(context).colorScheme.primary,
                   fontWeight: FontWeight.w500,
                 ),
               ),

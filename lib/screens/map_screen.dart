@@ -37,9 +37,8 @@ class _MapScreenState extends State<MapScreen> {
               child: IconButton(
                 onPressed: () => _scaffoldKey.currentState?.openDrawer(),
                 padding: const EdgeInsets.all(15),
-                style: const ButtonStyle(
-                  // backgroundColor: MaterialStatePropertyAll(Colors.blue),
-                  iconColor: MaterialStatePropertyAll(Colors.black),
+                style: ButtonStyle(
+                  iconColor: MaterialStatePropertyAll(Theme.of(context).colorScheme.tertiary),
                 ),
                 icon: const Icon(
                   Icons.menu,

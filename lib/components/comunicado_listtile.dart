@@ -7,7 +7,8 @@ class ComunicadoListtile extends StatelessWidget {
   const ComunicadoListtile({
     super.key,
     required this.titulo,
-    required this.subtitulo, this.onTap,
+    required this.subtitulo,
+    this.onTap,
   });
 
   @override
@@ -16,7 +17,7 @@ class ComunicadoListtile extends StatelessWidget {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(5),
       ),
-      tileColor: Colors.white,
+      tileColor: Theme.of(context).colorScheme.secondary,
       title: Text(
         titulo,
         style: const TextStyle(

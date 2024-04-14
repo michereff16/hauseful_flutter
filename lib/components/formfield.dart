@@ -24,19 +24,17 @@ class _CustomFormFieldState extends State<CustomFormField> {
       height: 50,
       child: TextField(
         controller: widget.inputController,
-        onChanged: (value) {
-          //Do something wi
-        },
+        onChanged: (value) {},
         keyboardType: TextInputType.emailAddress,
         obscureText: passwordVisible,
-        style: const TextStyle(
+        style: TextStyle(
           fontSize: 14,
-          color: Color(0xFF043C5C),
+          color: Theme.of(context).colorScheme.primary,
         ),
         decoration: InputDecoration(
           prefixIcon: Icon(
             widget.icon,
-            color: const Color(0xFF043C5C),
+            color: Theme.of(context).colorScheme.primary,
           ),
           suffixIcon: widget.hintText == 'Insira sua senha'
               ? IconButton(
@@ -47,7 +45,7 @@ class _CustomFormFieldState extends State<CustomFormField> {
                   },
                   icon: Icon(
                     passwordVisible ? Icons.visibility_off : Icons.visibility,
-                    color: const Color(0xFF043C5C),
+                    color: Theme.of(context).colorScheme.primary,
                   ),
                 )
               : null,
@@ -56,21 +54,21 @@ class _CustomFormFieldState extends State<CustomFormField> {
             vertical: 0.0,
             horizontal: 20.0,
           ),
-          border: const OutlineInputBorder(
+          border: OutlineInputBorder(
             borderSide: BorderSide(
-              color: Color(0xFF043C5C),
+              color: Theme.of(context).colorScheme.primary,
               width: 1.0,
             ),
-            borderRadius: BorderRadius.all(
+            borderRadius: const BorderRadius.all(
               Radius.circular(10.0),
             ),
           ),
-          focusedBorder: const OutlineInputBorder(
+          focusedBorder: OutlineInputBorder(
             borderSide: BorderSide(
-              color: Color(0xFF043C5C),
+              color: Theme.of(context).colorScheme.primary,
               width: 1.0,
             ),
-            borderRadius: BorderRadius.all(
+            borderRadius: const BorderRadius.all(
               Radius.circular(10.0),
             ),
           ),
@@ -83,12 +81,12 @@ class _CustomFormFieldState extends State<CustomFormField> {
               Radius.circular(10.0),
             ),
           ),
-          enabledBorder: const OutlineInputBorder(
+          enabledBorder: OutlineInputBorder(
             borderSide: BorderSide(
-              color: Color(0xFF043C5C),
+              color: Theme.of(context).colorScheme.primary,
               width: 1.0,
             ),
-            borderRadius: BorderRadius.all(
+            borderRadius: const BorderRadius.all(
               Radius.circular(10.0),
             ),
           ),
